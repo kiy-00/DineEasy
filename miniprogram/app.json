@@ -4,7 +4,9 @@
     "pages/club/index",
     "pages/vip-code/index",
     "pages/orders/index",
-    "pages/user-center/index"          
+    "pages/user-center/index",
+    "pages/order/index",
+    "pages/storeLocator/index"          
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -52,5 +54,10 @@
         "selectedIconPath": "images/icons/user-active.png"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于获取附近的门店"
+    }
   }
 }

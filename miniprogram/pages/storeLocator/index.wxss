@@ -1,0 +1,74 @@
+/* storeLocator.wxss */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.tab {
+  padding: 10px;
+}
+
+.store-list {
+  margin-top: 10px;
+}
+
+.store {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.info text {
+  display: block;
+}
+
+/* storeLocator.wxss */
+.search-section {
+  display: flex;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.region-picker, .search-input {
+  flex: 1; /* 增加这两个元素的弹性，使其占据更多空间 */
+  margin-right: 10px;
+  font-size: 12px;
+  background-color: white;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.region-picker
+{
+  height:20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.search-input {
+  flex: 5; /* 进一步增强搜索框的占比 */
+  padding-left: 10px;
+}
+
+.search-button {
+  flex:1;
+  height: 25px; /* 调整按钮的高度为更标准的尺寸 */
+  padding: 0 10px; /* 减少左右内边距 */
+  background-color: #e89abe;
+  color: white;
+  font-size: 12px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 25px; /* 调整行高以垂直居中文字 */
+}
+
+.search-button:active {
+  background-color: #cb7591; /* 点击时变色 */
+}
+
+
+
+

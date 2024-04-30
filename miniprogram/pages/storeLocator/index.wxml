@@ -1,0 +1,33 @@
+<!-- storeLocator.wxml -->
+<view class="store-locator">
+  <view class="tabs">
+    <view class="tab" bindtap="switchTab" data-tab="nearby">附近</view>
+    <view class="tab" bindtap="switchTab" data-tab="favorites">收藏</view>
+  </view>
+  <map id="map" latitude="0" longitude="0" style="width: 100%; height: 300px;"></map>
+  
+  <!-- 搜索框和地区选择器在同一行，添加搜索按钮 -->
+  <view class="search-section">
+    <picker bindchange="onRegionChange" mode="selector" value="{{regionIndex}}" range="{{regions}}" class="region-picker">
+      <view>{{regions[regionIndex]}}</view>
+    </picker>
+    <input type="text" placeholder="搜索门店" bindinput="onSearchInput" class="search-input"/>
+    <button class="search-button" bindtap="onSearch">搜索</button>
+  </view>
+
+  <view class="store-list">
+    <block wx:for="{{filteredStores}}" wx:key="id">
+      <view class="store">
+        <view class="info">
+          <text>{{item.name}}</text>
+          <text>{{item.address}}</text>
+          <text>{{item.distance}} km</text>
+        </view>
+        <view class="actions">
+          <button bindtap="makeCall" data-phone="{{item.phone}}">电话</button>
+          <button bindtap="navigateTo" data-lat="{{item.latitude}}" data-lng="{{item.longitude}}">导航</button>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

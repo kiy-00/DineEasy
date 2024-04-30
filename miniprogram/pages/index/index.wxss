@@ -1,3 +1,4 @@
+
 /* pages/index/index.wxss */
 .home-page {
   padding: 10px;
@@ -17,87 +18,70 @@
 
 .slide-image {
   width: 100%;
-  height: 100%;
   object-fit: cover;
-}
-
-.swiper-arrows {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: space-between;
-}
-
-.arrow {
-  width: 30px;
-  height: 30px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  text-align: center;
-  line-height: 30px;
-  font-size: 24px;
-}
-
-.arrow.left, .arrow.right {
-  border-radius: 15px;
-  cursor: pointer;
-}
-
-.arrow.left {
-  left: 10px;
-}
-
-.arrow.right {
-  right: 10px;
-}
-
-.arrow.left::before{
-  content: "<";
-}
-
-.arrow.right::before{
-  content:">";
 }
 
 .user-info-box {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   padding: 20px;
   background-color: #fff;
-  margin-top: 10px;
-  width: calc(100% - 40px); /* Adjust for padding */
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.user-avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 40px;
+.user-info-box .title
+{
+  font-size:14px;
+  color: #707070;
+}
+.user-info-box .content
+{
+  font-size: 14px;
+  color: #e89abe;
+}
+
+.user-info-box .user-level .content
+{
+  background-color: #c5628c; /* 深粉色背景 */
+  color: white; /* 白色文字 */
+  padding: 4px 8px; /* 文字与背景边界的间距 */
+  border-radius: 10px; /* 圆角边框 */
+  display: inline-block; /* 使padding和border-radius生效 */
+}
+
+.user-top {
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
 }
 
-.user-details {
-  width: 100%;
-  text-align: center;
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  margin-right: 20px;
 }
 
-.user-basic {
-  font-size: 16px;
-  color: #333;
+.user-name-level {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  flex-direction: column;
+}
+
+.user-name, .user-level {
+  margin: 2px 0;
+}
+
+.exp-text {
+  width: 100%;
+  margin-bottom: 5px;
 }
 
 .exp-bar-background {
   width: 100%;
   height: 8px;
-  background-color: #f9e6ef; /* Updated deep pink */
+  background-color: #e0e0e0;
   border-radius: 4px;
-  margin-top: 5px;
 }
 
 .exp-bar-fill {
@@ -109,25 +93,89 @@
 .user-assets {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   margin-top: 10px;
-  font-size: 14px;
 }
 
-.dining-options, .feature-modules {
-  margin-top: 20px;
-}
 
-.dine-in-box, .takeaway-box, .module-box {
+.dining-options {
+  display: flex;
+  justify-content: space-around; /* 平均分布每个选项，并提供空间 */
+  width: 100%;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+.option-box {
   flex: 1;
   text-align: center;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 5px; /* 保持原有间距设置 */
+  height: 125px;
+  box-sizing: border-box; /* 确保边框和内边距包含在宽度内 */
 }
 
-.option-icon, .module-icon {
-  width: 50px;
-  height: 50px;
+.option-box:first-child {
+  border-right: 2px solid #f7dce8; /* 浅粉色的右边框 */
+  margin-right: -4px; /* 调整边框重叠 */
+}
+
+
+.option-icon {
+  width: 65px;       /* 固定宽度 */
+  height: 65px;
+  display: block;
   margin: 10px auto;
 }
+
+.option-box text
+{
+  display:block;
+  font-size: 16px;
+  color:#707070;
+}
+.option-box .remark
+{
+  font-size:12px;
+  color:#e89abe;
+}
+
+.feature-modules {
+  display: flex;
+  flex-wrap: wrap; /* 允许子项换行 */
+  justify-content: flex-start; /* 使项目从行的起始位置开始排列 */
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.module-box {
+  display: flex; /* 设置flex布局 */
+  flex-direction: column; /* 子项垂直排列 */
+  justify-content: center; /* 垂直居中 */
+  align-items: center; /* 水平居中 */
+  width: calc(33.333% - 4px); /* 每个盒子宽度为行宽的三分之一，减去总间距的一部分 */
+  height: 95px;
+  text-align: center;
+  margin: 2px; /* 为每个盒子添加边距，确保间距均匀 */
+}
+
+.module-icon {
+  width: 40px; /* 图标宽度 */
+  object-fit: cover;
+  margin: 15px auto; /* 调整上下边距 */
+  display: block; /* 确保图标作为块级元素独立显示 */
+}
+
+.module-box text {
+  display: block; /* 使文本成为块级元素 */
+  margin-top: auto; /* 自动调整顶部间距 */
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #707070;
+}
+
+
+
+
+
+

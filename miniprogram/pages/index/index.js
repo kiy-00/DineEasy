@@ -1,4 +1,5 @@
 // pages/index/index.js
+const app = getApp();
 Page({
   data: {
     userInfo: {
@@ -13,33 +14,26 @@ Page({
     swiperMax: 2
   },
 
-  swiperLeft: function() {
-    console.log('Swiping left');
-    let newIndex = this.data.currentSwiper - 1;
-    if (newIndex < 0) {
-      newIndex = this.data.swiperMax;
-    }
-    this.setData({
-      currentSwiper: newIndex
-    });
-  },
-  
-  swiperRight: function() {
-    console.log('Swiping right');
-    let newIndex = this.data.currentSwiper + 1;
-    if (newIndex > this.data.swiperMax) {
-      newIndex = 0;
-    }
-    this.setData({
-      currentSwiper: newIndex
-    });
-  },  
-
   onLoad: function(options) {
     // Page initialization logic here
   },
 
   onShow: function() {
     // Actions to take when page is displayed
+  },
+
+  goToDineIn: function() {
+    // 检查用户是否已选择门店
+    if (false/*app.globalData.selectedStore*/) {
+      // 如果已选择门店，跳转到点餐页面
+      wx.navigateTo({
+        url: '/pages/order/index' // 确保这个路径是正确的
+      });
+    } else {
+      // 如果未选择门店，跳转到选择门店页面
+      wx.navigateTo({
+        url: '/pages/storeLocator/index' // 确保这个路径是正确的
+      });
+    }
   }
 });

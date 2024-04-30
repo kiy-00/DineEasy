@@ -13,61 +13,94 @@
         <image src="../../images/advertising/image3.jpg" class="slide-image"></image>
       </swiper-item>
     </swiper>
-    <view class="swiper-arrows">
-      <view class="arrow left" bindtap="swiperLeft"></view>
-      <view class="arrow right" bindtap="swiperRight"></view>
-    </view>
   </view>
 
  <!-- User Information Box -->
-<view class="user-info-box">
-  <image src="{{userInfo.avatar}}" class="user-avatar"></image>
-  <view class="user-details">
-    <view class="user-basic">
-      <text class="user-name">用户名：{{userInfo.name}}</text>
-      <text class="user-level">当前等级：{{userInfo.level}}</text>
-    </view>
-    <text>当前经验值：{{userInfo.exp}} / 1000</text>
-    <view class="exp-bar-background">
-      <view class="exp-bar-fill" style="width:{{userInfo.exp / 1000 * 100}}\%"></view>
-    </view>
-    <view class="user-assets">
-      <text>优惠券：{{userInfo.coupons}}张</text>
-      <text>余额：¥{{userInfo.balance}}</text>
+ <view class="user-info-box">
+  <view class="user-top">
+    <image src="{{userInfo.avatar}}" class="user-avatar"></image>
+    <view class="user-name-level">
+      <text class="user-name">
+        <text class="title">用户名：</text>
+        <text class="content">{{userInfo.name}}</text>
+      </text>
+      <text class="user-level">
+        <text class="title">当前等级：</text>
+        <text class="content">{{userInfo.level}}</text>
+      </text>
     </view>
   </view>
-</view>
+  <text class="exp-text">
+    <text class="title">当前经验值：</text>
+    <text class="content">{{userInfo.exp}} / 1000</text>
+  </text>
+  <view class="exp-bar-background">
+    <view class="exp-bar-fill" style="width:{{userInfo.exp / 1000 * 100}}\%;"></view>
+  </view>
+  <view class="user-assets">
+    <text>
+      <text class="title">优惠券：</text>
+      <text class="content">{{userInfo.coupons}}张</text>
+    </text>
+    <text>
+      <text class="title">余额：</text>
+      <text class="content">¥{{userInfo.balance}}</text>
+    </text>
+  </view>
+ </view>
 
 
   <!-- Dining Options -->
   <view class="dining-options">
     <view class="option-box dine-in-box" bindtap="goToDineIn">
-      <image src="images/dine-in.png" class="option-icon"></image>
+      <image src="../../images/dine-in.png" class="option-icon"></image>
       <text>堂食点餐</text>
+      <text class="remark">便捷快速，即享美味</text>
     </view>
     <view class="option-box takeaway-box" bindtap="goToTakeAway">
-      <image src="images/takeaway.png" class="option-icon"></image>
+      <image src="../../images/takeaway.png" class="option-icon"></image>
       <text>外卖送单</text>
+      <text class="remark">门店自取，同城速达</text>
     </view>
   </view>
 
   <!-- Feature Modules -->
   <view class="feature-modules">
-    <view class="module-box">
-      <image src="images/recharge.png" class="module-icon"></image>
+    <view class="module-box" bindtap="goToRecharge">
+      <image src="../../images/modules/recharge.png" class="module-icon"></image>
       <text>在线充值</text>
     </view>
-    <view class="module-box">
-      <image src="images/student.png" class="module-icon"></image>
+    <view class="module-box" bindtap="viewPrivilege">
+      <image src="../../images/modules/student.png" class="module-icon"></image>
       <text>学生特权</text>
     </view>
-    <view class="module-box">
-      <image src="images/points.png" class="module-icon"></image>
+    <view class="module-box" bindtap="goToPointsMall">
+      <image src="../../images/modules/points.png" class="module-icon"></image>
       <text>积分商城</text>
     </view>
-    <view class="module-box">
-      <image src="images/coupon.png" class="module-icon"></image>
+    <view class="module-box" bindtap="goToExchange">
+      <image src="../../images/modules/coupon.png" class="module-icon"></image>
       <text>券码兑换</text>
+    </view>
+    <view class="module-box" bindtap="goToPlayLand">
+      <image src="../../images/modules/game.png" class="module-icon"></image>
+      <text>游戏乐园</text>
+    </view>
+    <view class="module-box" bindtap="goToSignIn">
+      <image src="../../images/modules/sign-in.png" class="module-icon"></image>
+      <text>签到有礼</text>
+    </view>
+    <view class="module-box" bindtap="goToEShop">
+      <image src="../../images/modules/markt.png" class="module-icon"></image>
+      <text>电商好物</text>
+    </view>
+    <view class="module-box" bindtap="viewStatistic">
+      <image src="../../images/modules/statistic.png" class="module-icon"></image>
+      <text>支出统计</text>
+    </view>
+    <view class="module-box" bindtap="viewActivity">
+      <image src="../../images/modules/activity.png" class="module-icon"></image>
+      <text>活动集锦</text>
     </view>
   </view>
 </view>
