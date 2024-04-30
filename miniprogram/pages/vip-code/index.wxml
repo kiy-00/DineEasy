@@ -1,0 +1,7 @@
+<!-- pages/vip-code/index.wxml -->
+<view class="vip-code-page">
+    <view class="vip-code-container">
+        <text>您的专属会员码：</text>
+        <view class="vip-code">{{vipCode}}</view>
+    </view>
+</view>

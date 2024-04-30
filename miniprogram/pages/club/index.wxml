@@ -1,0 +1,12 @@
+<!-- Container for the club page -->
+<view class="club-page">
+    <!-- Page Title -->
+    <view class="page-title">
+        <text>欢迎进入俱乐部</text>
+    </view>
+
+    <!-- Content Section -->
+    <view class="content-section">
+        <text>这里是俱乐部会员可以享受特权的地方。</text>
+    </view>
+</view>

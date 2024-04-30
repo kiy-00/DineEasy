@@ -1,0 +1,7 @@
+<!-- pages/user-center/index.wxml -->
+<view class="user-center-page">
+    <view class="user-info">
+        <text class="user-name">{{userInfo.name}}</text>
+        <text class="membership-level">{{userInfo.membershipLevel}}</text>
+    </view>
+</view>

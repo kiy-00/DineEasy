@@ -1,0 +1,21 @@
+/* pages/vip-code/index.wxss */
+.vip-code-page {
+  padding: 20px;
+  background-color: #f9e6ef; /* Lighter shade of #e89abe */
+}
+
+.vip-code-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff; /* A contrast to the pink background for better readability */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.vip-code {
+  font-size: 24px;
+  color: #e89abe;
+  font-weight: bold;
+  margin-top: 10px;
+}

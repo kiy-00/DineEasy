@@ -1,0 +1,13 @@
+<!-- pages/orders/index.wxml -->
+<view class="orders-page">
+    <view class="order-list">
+        <block wx:for="{{orders}}" wx:key="id">
+            <view class="order-item" bindtap="goToOrderDetail" data-id="{{item.id}}">
+                <text class="order-title">{{item.title}}</text>
+                <!-- 使用条件渲染设置不同的类名 -->
+                <text class="order-status {{item.status}}">{{item.status}}</text>
+                <text class="order-date">{{item.date}}</text>
+            </view>
+        </block>
+    </view>
+</view>

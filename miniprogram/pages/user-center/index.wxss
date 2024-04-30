@@ -1,0 +1,24 @@
+/* pages/user-center/index.wxss */
+.user-center-page {
+  padding: 20px;
+  background-color: #f9e6ef; /* Lighter shade of #e89abe */
+}
+
+.user-info {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.user-name {
+  font-size: 18px;
+  color: #707070;
+  margin-bottom: 10px;
+}
+
+.membership-level {
+  font-size: 16px;
+  color: #e89abe;
+}

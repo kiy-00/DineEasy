@@ -1,0 +1,42 @@
+/* pages/orders/index.wxss */
+.orders-page {
+  padding: 20px;
+  background-color: #f9e6ef; /* Lighter shade of #e89abe */
+}
+
+.order-list {
+  margin-top: 10px;
+}
+
+.order-item {
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-title, .order-date {
+  color: #707070;
+  font-size: 16px;
+}
+
+.order-status {
+  font-size: 16px;
+  margin-left: auto; /* Align to the right */
+}
+
+.order-status.completed {
+  color: #07C160; /* Green for completed */
+}
+
+.order-status.in_process {
+  color: #FFA500; /* Orange for in progress */
+}
+
+.order-status.cancelled {
+  color: #FF0000; /* Red for canceled */
+}

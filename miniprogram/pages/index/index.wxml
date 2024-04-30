@@ -1,0 +1,73 @@
+<!-- pages/index/index.wxml -->
+<view class="home-page">
+  <!-- Carousel for images with navigation dots and arrows -->
+  <view class="carousel-container">
+    <swiper class="carousel" current="{{currentSwiper}}" autoplay interval="5000" circular indicator-dots="true">
+      <swiper-item>
+        <image src="../../images/advertising/image1.jpg" class="slide-image"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../images/advertising/image2.jpg" class="slide-image"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../images/advertising/image3.jpg" class="slide-image"></image>
+      </swiper-item>
+    </swiper>
+    <view class="swiper-arrows">
+      <view class="arrow left" bindtap="swiperLeft"></view>
+      <view class="arrow right" bindtap="swiperRight"></view>
+    </view>
+  </view>
+
+ <!-- User Information Box -->
+<view class="user-info-box">
+  <image src="{{userInfo.avatar}}" class="user-avatar"></image>
+  <view class="user-details">
+    <view class="user-basic">
+      <text class="user-name">用户名：{{userInfo.name}}</text>
+      <text class="user-level">当前等级：{{userInfo.level}}</text>
+    </view>
+    <text>当前经验值：{{userInfo.exp}} / 1000</text>
+    <view class="exp-bar-background">
+      <view class="exp-bar-fill" style="width:{{userInfo.exp / 1000 * 100}}\%"></view>
+    </view>
+    <view class="user-assets">
+      <text>优惠券：{{userInfo.coupons}}张</text>
+      <text>余额：¥{{userInfo.balance}}</text>
+    </view>
+  </view>
+</view>
+
+
+  <!-- Dining Options -->
+  <view class="dining-options">
+    <view class="option-box dine-in-box" bindtap="goToDineIn">
+      <image src="images/dine-in.png" class="option-icon"></image>
+      <text>堂食点餐</text>
+    </view>
+    <view class="option-box takeaway-box" bindtap="goToTakeAway">
+      <image src="images/takeaway.png" class="option-icon"></image>
+      <text>外卖送单</text>
+    </view>
+  </view>
+
+  <!-- Feature Modules -->
+  <view class="feature-modules">
+    <view class="module-box">
+      <image src="images/recharge.png" class="module-icon"></image>
+      <text>在线充值</text>
+    </view>
+    <view class="module-box">
+      <image src="images/student.png" class="module-icon"></image>
+      <text>学生特权</text>
+    </view>
+    <view class="module-box">
+      <image src="images/points.png" class="module-icon"></image>
+      <text>积分商城</text>
+    </view>
+    <view class="module-box">
+      <image src="images/coupon.png" class="module-icon"></image>
+      <text>券码兑换</text>
+    </view>
+  </view>
+</view>

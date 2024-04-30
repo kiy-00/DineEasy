@@ -1,0 +1,133 @@
+/* pages/index/index.wxss */
+.home-page {
+  padding: 10px;
+  background-color: #f9e6ef; /* Lighter shade of #e89abe */
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden; /* Ensures no spillover of the content */
+  position: relative; /* For absolute positioning of arrows */
+}
+
+.carousel {
+  width: 100%;
+  height: 200px;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-arrows {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  font-size: 24px;
+}
+
+.arrow.left, .arrow.right {
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.arrow.left::before{
+  content: "<";
+}
+
+.arrow.right::before{
+  content:">";
+}
+
+.user-info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 10px;
+  width: calc(100% - 40px); /* Adjust for padding */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  margin-bottom: 10px;
+}
+
+.user-details {
+  width: 100%;
+  text-align: center;
+}
+
+.user-basic {
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.exp-bar-background {
+  width: 100%;
+  height: 8px;
+  background-color: #f9e6ef; /* Updated deep pink */
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.exp-bar-fill {
+  height: 8px;
+  background-color: #e89abe;
+  border-radius: 4px;
+}
+
+.user-assets {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.dining-options, .feature-modules {
+  margin-top: 20px;
+}
+
+.dine-in-box, .takeaway-box, .module-box {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.option-icon, .module-icon {
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+}
