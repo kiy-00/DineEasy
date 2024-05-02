@@ -24,7 +24,7 @@ Page({
 
   goToDineIn: function() {
     // 检查用户是否已选择门店
-    if (false/*app.globalData.selectedStore*/) {
+    if (app.globalData.selectedStore) {
       // 如果已选择门店，跳转到点餐页面
       wx.navigateTo({
         url: '/pages/order/index' // 确保这个路径是正确的
