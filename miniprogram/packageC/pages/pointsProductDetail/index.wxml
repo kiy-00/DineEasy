@@ -1,0 +1,10 @@
+<!-- pages/productDetail/index.wxml -->
+<view class="product-detail-page">
+  <image src="{{product.image}}" class="product-image"></image>
+  <view class="product-info">
+    <text class="name">{{product.name}}</text>
+    <text class="points">{{product.points}} 积分</text>
+    <text class="stock">剩余量：{{product.stock}}</text>
+  </view>
+  <button class="exchange-button" bindtap="exchangeProduct">兑换</button>
+</view>

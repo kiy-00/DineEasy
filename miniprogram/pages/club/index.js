@@ -1,12 +1,6 @@
 Page({
   data: {
     userInfo: {
-      name: "张三",
-      level: "金卡会员",
-      exp: 500,
-      coupons: 5,
-      balance: 200,
-      avatar: "../../images/avatar.png" // 示例头像路径
     },
     discounts: [
       { title: "折扣菜品1", detail: "折扣价格 ￥XX.XX" },
@@ -21,8 +15,28 @@ Page({
     ]
   },
 
-  onLoad: function(options) {
-    console.log("页面加载", this.data.userInfo);
+  onLoad: function() {
+    // 从全局状态获取用户信息
+    const globalData = getApp().globalData;
+    if (globalData.userInfo) {
+      this.setData({
+        userInfo: globalData.userInfo
+      });
+    } else {
+      // 从本地存储获取用户信息
+      const userInfo = wx.getStorageSync('userInfo');
+      if (userInfo) {
+        this.setData({
+          userInfo
+        });
+      } else {
+        // 处理未登录状态
+        wx.showToast({
+          title: '请先登录',
+          icon: 'none'
+        });
+      }
+    }
   },
   onShow: function() {
     console.log("页面显示");

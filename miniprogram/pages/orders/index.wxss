@@ -1,42 +1,95 @@
 /* pages/orders/index.wxss */
 .orders-page {
-  padding: 20px;
-  background-color: #f9e6ef; /* Lighter shade of #e89abe */
+  padding: 10px;
+  background-color: #f9e6ef;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  margin: 0 5px;
+  color: #707070;
+}
+
+.tab.active {
+  background-color: #e89abe;
+  color: #ffffff;
 }
 
 .order-list {
-  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.order-item {
+.order {
+  background-color: #ffffff;
   padding: 10px;
-  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #707070;
+}
+
+.order-type {
+  background-color: #e89abe;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+
+.order-status {
+  color: #e89abe;
+}
+
+.order-goods {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   margin-bottom: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.goods-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.order-title, .order-date {
+.goods-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
   color: #707070;
-  font-size: 16px;
 }
 
-.order-status {
-  font-size: 16px;
-  margin-left: auto; /* Align to the right */
-}
-
-.order-status.completed {
-  color: #07C160; /* Green for completed */
-}
-
-.order-status.in_process {
-  color: #FFA500; /* Orange for in progress */
-}
-
-.order-status.cancelled {
-  color: #FF0000; /* Red for canceled */
+.order-date {
+  color: #e89abe;
+  font-size: 12px;
 }

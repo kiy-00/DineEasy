@@ -1,0 +1,35 @@
+<view class="login-page">
+
+  <view class="background-container">
+    <image src="../../../images/user-center/background.jpg" class="background"></image>
+  </view>
+ 
+
+  <view class="title">欢迎来到DineEasy</view>
+  
+  <!-- 微信一键登录按钮 -->
+  <button bindtap="onGetWechatAuth">
+    <text>微信一键登录</text>
+  </button>
+
+  <!-- 或者 -->
+  <view class="or-separator">或者</view>
+
+  <!-- 密码登录/注册表单 -->
+  <form bindsubmit="onPasswordLogin">
+    <input
+      placeholder="{{usernamePlaceholder}}"
+      name="username"
+      bindinput="onUsernameInput"
+    />
+    <input
+      placeholder="{{passwordPlaceholder}}"
+      name="password"
+      password="true"
+      bindinput="onPasswordInput"
+    />
+    <button form-type="submit" class="submit-button">
+      <text>登录/注册</text>
+    </button>
+  </form>
+</view>

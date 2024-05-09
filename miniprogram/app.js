@@ -89,7 +89,10 @@ App({
     });
   },
 
+  // 全局数据
   globalData: {
-    isConnected: true  // 网络连接状态
+    isConnected: true,  // 网络连接状态
+    userInfo: null,    // 用户信息
+    selectedStore: null
   }
 });

@@ -1,0 +1,34 @@
+<!-- pages/points/index.wxml -->
+<view class="points-page">
+  <!-- 顶部图片 -->
+  <view class="header">
+    <image src="../../../images/points/header.jpg" class="header-image"></image>
+    <view class="overlay">
+      <view class="store" bindtap="goToStoreLocator">
+        <text>当前门店：{{selectedStore.name}}</text>
+      </view>
+      <view class="points">
+        <image src="../../../images/points/points.png" class="points-icon"></image>
+        <text>{{userPoints}} 积分</text>
+      </view>
+      <view class="tabs">
+        <view class="tab" bindtap="goToPointsDetail">积分明细</view>
+        <view class="tab" bindtap="goToPointsRules">积分规则</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 商品列表 -->
+  <view class="product-list">
+    <block wx:for="{{products}}" wx:key="id">
+      <view class="product-box" bindtap="goToProductDetail" data-id="{{item.id}}">
+        <image src="{{item.image}}" class="product-image"></image>
+        <view class="product-info">
+          <text class="name">{{item.name}}</text>
+          <text class="point">{{item.points}} 积分</text>
+          <text class="stock">剩余量：{{item.stock}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

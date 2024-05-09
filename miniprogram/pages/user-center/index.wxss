@@ -1,24 +1,149 @@
 /* pages/user-center/index.wxss */
 .user-center-page {
-  padding: 20px;
-  background-color: #f9e6ef; /* Lighter shade of #e89abe */
+  padding: 10px;
+  background-color: #f9e6ef;
 }
 
-.user-info {
+.background-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.user-info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
   padding: 20px;
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.user-name {
-  font-size: 18px;
+.user-info-box .title
+{
+  font-size:14px;
   color: #707070;
+}
+.user-info-box .content
+{
+  font-size: 14px;
+  color: #e89abe;
+}
+
+.user-info-box .user-level .content
+{
+  background-color: #c5628c; /* 深粉色背景 */
+  color: white; /* 白色文字 */
+  padding: 4px 8px; /* 文字与背景边界的间距 */
+  border-radius: 10px; /* 圆角边框 */
+  display: inline-block; /* 使padding和border-radius生效 */
+}
+
+.user-top {
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
 }
 
-.membership-level {
-  font-size: 16px;
-  color: #e89abe;
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  margin-right: 20px;
+}
+
+.user-name-level {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name, .user-level {
+  margin: 2px 0;
+}
+
+.login {
+  background-color: #e89abe;
+  padding: 2px 8px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.login text {
+  font-size: 12px;
+  color: white;
+}
+
+.exp-text {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.exp-bar-background {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+
+.exp-bar-fill {
+  height: 8px;
+  background-color: #e89abe;
+  border-radius: 4px;
+}
+
+.assets {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.asset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.asset-icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.asset text {
+  font-size: 12px;
+  color: #707070;
+}
+
+.calendar {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.calendar-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.calendar-cell {
+  text-align: center;
+}
+
+.calendar-date {
+  font-size: 14px;
+  color: #707070;
+}
+
+.calendar-check {
+  margin-top: 5px;
+}
+
+.check-icon {
+  width: 15px;
+  height: 15px;
 }

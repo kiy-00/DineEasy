@@ -1,0 +1,53 @@
+/* pages/productDetail/index.wxss */
+.product-detail-page {
+  padding: 20px;
+  background-color: #f9e6ef;
+}
+
+.product-image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-info .name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e89abe;
+  margin-bottom: 5px;
+}
+
+.product-info .points {
+  font-size: 16px;
+  color: #707070;
+  margin-bottom: 5px;
+}
+
+.product-info .stock {
+  font-size: 14px;
+  color:#ccc;
+  align-self: flex-end;
+}
+
+.exchange-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #e89abe;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

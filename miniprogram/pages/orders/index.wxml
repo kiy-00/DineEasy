@@ -1,13 +1,54 @@
 <!-- pages/orders/index.wxml -->
 <view class="orders-page">
-    <view class="order-list">
-        <block wx:for="{{orders}}" wx:key="id">
-            <view class="order-item" bindtap="goToOrderDetail" data-id="{{item.id}}">
-                <text class="order-title">{{item.title}}</text>
-                <!-- 使用条件渲染设置不同的类名 -->
-                <text class="order-status {{item.status}}">{{item.status}}</text>
-                <text class="order-date">{{item.date}}</text>
-            </view>
-        </block>
+  <!-- Tab栏 -->
+  <view class="tabs">
+    <view
+      class="tab {{currentTab === 'all' ? 'active' : ''}}"
+      bindtap="switchTab"
+      data-tab="all"
+    >
+      全部
     </view>
+    <view
+      class="tab {{currentTab === 'store' ? 'active' : ''}}"
+      bindtap="switchTab"
+      data-tab="store"
+    >
+      门店订单
+    </view>
+    <view
+      class="tab {{currentTab === 'ecommerce' ? 'active' : ''}}"
+      bindtap="switchTab"
+      data-tab="ecommerce"
+    >
+      电商订单
+    </view>
+  </view>
+
+  <!-- 订单列表 -->
+  <view class="order-list">
+    <block wx:for="{{filteredOrders}}" wx:key="id">
+      <view class="order">
+        <view class="order-header">
+          <text class="order-type">{{item.type}}</text>
+          <text class="order-shop">{{item.shopName}}（{{item.shopCode}}）</text>
+          <text class="order-status">{{item.status}}</text>
+        </view>
+        <view class="order-goods">
+          <block wx:for="{{item.goods}}" wx:key="id">
+            <view class="goods-item">
+              <image src="{{goodsItem.image}}" class="goods-image"></image>
+              <text class="goods-quantity">{{goodsItem.quantity}} x {{goodsItem.name}}</text>
+            </view>
+          </block>
+        </view>
+        <view class="order-footer">
+          <text class="order-date">{{item.date}}</text>
+          <text class="order-summary">
+            共{{item.totalQuantity}}件商品 | 合计：¥{{item.totalPrice}}
+          </text>
+        </view>
+      </view>
+    </block>
+  </view>
 </view>

@@ -1,7 +1,68 @@
 <!-- pages/user-center/index.wxml -->
 <view class="user-center-page">
-    <view class="user-info">
-        <text class="user-name">{{userInfo.name}}</text>
-        <text class="membership-level">{{userInfo.membershipLevel}}</text>
+  <!-- 背景图 -->
+  <image src="../../images/user-center/background.jpg" class="background-image"></image>
+
+  <!-- User Information Box -->
+ <view class="user-info-box">
+  <view class="user-top">
+    <image src="{{userInfo.avatar}}" class="user-avatar"></image>
+    <view wx:if="{{userInfo.name}}" class="user-name-level">
+      <text class="user-name" bindtap="gotoProfile">
+        <text class="title">用户名：</text>
+        <text class="content">{{userInfo.name}}</text>
+      </text>
+      <text class="user-level" wx:if="{{userInfo.name}}">
+        <text class="title">当前等级：</text>
+        <text class="content">{{userInfo.level}}</text>
+      </text>
     </view>
+    <view wx:else class="login" bindtap="gotoLogin">
+      <text>登录/注册</text>
+    </view>
+  </view>
+  <text class="exp-text">
+    <text class="title">当前经验值：</text>
+    <text class="content">{{userInfo.exp}} / 1000</text>
+  </text>
+  <view class="exp-bar-background">
+    <view class="exp-bar-fill" style="width:{{userInfo.exp / 1000 * 100}}\%;"></view>
+  </view>
+ </view>
+
+  <!-- 五个小模块 -->
+  <view class="assets">
+    <view class="asset" bindtap="gotoOrders">
+      <image src="../../images/assets/orders.png" class="asset-icon"></image>
+      <text>我的订单</text>
+    </view>
+    <view class="asset" bindtap="gotoPoints">
+      <image src="../../images/assets/points.png" class="asset-icon"></image>
+      <text>我的积分</text>
+    </view>
+    <view class="asset" bindtap="gotoCoupons">
+      <image src="../../images/assets/coupons.png" class="asset-icon"></image>
+      <text>优惠券</text>
+    </view>
+    <view class="asset" bindtap="gotoFranchise">
+      <image src="../../images/assets/franchise.png" class="asset-icon"></image>
+      <text>招商加盟</text>
+    </view>
+    <view class="asset" bindtap="gotoBalance">
+      <image src="../../images/assets/balance.png" class="asset-icon"></image>
+      <text>账户余额</text>
+    </view>
+  </view>
+
+  <!-- 日历签到 -->
+  <view class="calendar">
+    <view class="calendar-row" wx:for="{{calendarRows}}" wx:key="index">
+      <view class="calendar-cell" wx:for="{{item}}" wx:key="date">
+        <text class="calendar-date">{{item.date}}</text>
+        <view class="calendar-check" wx:if="{{item.signed}}">
+          <image src="../../images/icons/check.png" class="check-icon"></image>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

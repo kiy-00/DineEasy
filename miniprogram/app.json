@@ -2,11 +2,30 @@
   "pages": [
     "pages/index/index",
     "pages/club/index",
-    "pages/vip-code/index",
     "pages/orders/index",
+    "pages/vip-code/index",
     "pages/user-center/index",
-    "pages/order/index",
-    "pages/storeLocator/index"          
+    "pages/storeLocator/index"    
+  ],
+  "subPackages":[{
+		"root": "packageA",
+		"pages":[
+      "pages/order/index"
+		  ]
+    },
+    {
+      "root": "packageB",
+      "pages": [
+        "pages/login/index"
+      ]
+    },
+    {
+      "root": "packageC",
+      "pages": [
+        "pages/points/index",
+        "pages/pointsProductDetail/index"
+      ]
+    }
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
